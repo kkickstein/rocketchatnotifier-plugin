@@ -177,10 +177,6 @@ public class RocketChatClientCallBuilder {
   }
 
   private HttpClient createHttpClient(boolean trustSSL) {
-    if (!trustSSL) {
-      return new DefaultHttpClient();
-    }
-
     try {
       SSLContext sslContext = SSLContext.getInstance("SSL");
 
